@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>🐍 Princess Riham MObile Snake Game 👑</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>🐍 Princess Riham Mobile Snake Game 👑
+            I made this mobile version for my boyfriend since he doesn't have a PC
+            (love him so much)
+                       
+        </h1>
+        <div class="score-board">
+            <span>Score: <span id="score">0</span></span>
+            <span>High Score: <span id="highScore">0</span></span>
+        </div>
+        <canvas id="gameCanvas" width="400" height="400"></canvas>
+        
+        <!-- Touch Controls for Mobile -->
+        <div class="touch-controls">
+            <div class="d-pad">
+                <button class="control-btn up" id="btnUp">▲</button>
+                <div class="middle-row">
+                    <button class="control-btn left" id="btnLeft">◀</button>
+                    <button class="control-btn center" id="btnPause">⏸</button>
+                    <button class="control-btn right" id="btnRight">▶</button>
+                </div>
+                <button class="control-btn down" id="btnDown">▼</button>
+            </div>
+        </div>
+        
+        <div class="controls desktop-only">
+            <p>Use <span class="key">↑</span> <span class="key">↓</span> <span class="key">←</span> <span class="key">→</span> or WASD to move</p>
+            <p>Press <span class="key">SPACE</span> to pause</p>
+        </div>
+        
+        <div class="mobile-hint">
+            <p>👆 Use the buttons below or swipe to move!</p>
+        </div>
+        
+        <div id="gameOver" class="game-over hidden">
+            <h2>Game Over!</h2>
+            <p>Final Score: <span id="finalScore">0</span></p>
+            <button onclick="restartGame()">Play Again</button>
+        </div>
+        <button id="startBtn" onclick="startGame()">Start Game</button>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
